@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRotas - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1542705959-878ca346eb20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Imagem de fundo */
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade ajustada */
+            padding: 40px; /* Aumentei o padding para mais espaço interno */
+            border-radius: 15px; /* Borda mais arredondada para um visual moderno */
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais proeminente */
+            max-width: 400px;
+            width: 100%; /* Responsividade para mobile */
+        }
+
+        h1 {
+            color: #2ca234; /* Verde do título */
+            font-size: 2em; /* Tamanho maior para destaque */
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 5px 0; /* Espaçamento ajustado */
+            font-size: 1.1em;
+        }
+
+        .required::after {
+            content: " *";
+            color: red;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Para garantir que o padding não altere a largura */
+        }
+
+        button {
+            background-color: #2ca234; /* Cor mais viva e chamativa */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease; /* Transição suave na mudança de cor */
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #24992b; /* Cor ao passar o mouse */
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 20px;
+            }
+
+            input[type="email"],
+            input[type="password"],
+            button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>EcoRotas</h1>
+        <form action="#" method="POST">
+            <label for="email" class="required">Digite o seu Email</label>
+            <input type="email" id="email" placeholder="Digite o seu Email" required aria-label="Digite o seu Email" autofocus><br>
+            
+            <label for="password" class="required">Digite a sua Senha</label>
+            <input type="password" id="password" placeholder="Digite a sua Senha" required aria-label="Digite a sua Senha"><br>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+

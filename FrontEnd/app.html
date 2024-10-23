@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,16 @@
         /* Importando a fonte Roboto */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-        /* Estilos para o corpo */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
             overflow: hidden;
-            background: url('C:/Users/Aluno/Desktop/projeto/bela-paisagem-montanhosa.jpg') no-repeat center center fixed;
+            background: url('C:/Users/Aluno/Desktop/app/bela-paisagem-montanhosa.jpg') no-repeat center center fixed;
             background-size: cover;
             position: relative;
         }
 
-        /* Adicionando uma camada de sobreposição */
         body::before {
             content: '';
             position: absolute;
@@ -31,7 +29,6 @@
             z-index: -1;
         }
 
-        /* Estilos para a tela */
         .screen {
             position: relative;
             display: flex;
@@ -39,41 +36,54 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: white; /* Cor do texto */
+            color: white;
         }
 
-        /* Estilo do texto centralizado */
         .centered-text {
-            font-size: 48px; /* Tamanho maior */
+            font-size: 48px;
             text-align: center;
             z-index: 2;
-            letter-spacing: 1px; /* Espaçamento entre letras */
-            margin-bottom: 40px; /* Espaçamento inferior para o botão */
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombras para melhorar legibilidade */
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
 
-        /* Estilo do botão de login */
+        /* Estilo do logo giratório */
+        .rotating-logo {
+            width: 150px; /* Tamanho do logo */
+            animation: spin 5s infinite linear; /* Animação de rotação */
+            z-index: 2;
+        }
+
+        /* Definição da animação de rotação */
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
         .login-btn {
             padding: 15px 40px;
-            background-color: #ffffff; /* Cor neutra */
+            background-color: #ffffff;
             color: #333333;
             font-family: 'Roboto', sans-serif;
             font-size: 24px;
             border: none;
-            border-radius: 30px; /* Botão mais arredondado */
+            border-radius: 30px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             z-index: 2;
         }
 
-        /* Efeito hover para o botão */
         .login-btn:hover {
             background-color: #dddddd;
-            transform: scale(1.05); /* Efeito de leve aumento */
+            transform: scale(1.05);
         }
 
-        /* Estilo para o modal de login */
         .modal {
             display: none;
             position: fixed;
@@ -88,7 +98,6 @@
             z-index: 3;
         }
 
-        /* Estilo dos campos de input no modal */
         .modal input {
             width: 100%;
             padding: 15px;
@@ -98,11 +107,10 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        /* Botão dentro do modal */
         .modal .modal-btn {
             width: 100%;
             padding: 15px;
-            background-color: #333333; /* Cor neutra escura */
+            background-color: #333333;
             color: white;
             border: none;
             border-radius: 8px;
@@ -116,7 +124,6 @@
             background-color: #555555;
         }
 
-        /* Estilo para o botão de fechar o modal */
         .close-btn {
             position: absolute;
             top: 10px;
@@ -132,8 +139,9 @@
 </head>
 <body>
 
-<!-- Texto centralizado e botão de login -->
+<!-- Texto centralizado, logo animado e botão de login -->
 <div class="screen">
+    <img src="C:/Users/Aluno/Downloads/EcoRotas1-removebg-preview.png" alt="Logo EcoRotas" class="rotating-logo">
     <div class="centered-text">Sua melhor rota está aqui</div>
     <!-- Botão de login que abre o modal -->
     <button class="login-btn" id="openModalButton">Entrar</button>
@@ -142,7 +150,7 @@
 <!-- Modal de login -->
 <div class="modal" id="loginModal">
     <button class="close-btn" id="closeModalButton">×</button>
-    <h2 style="text-align: center; color: #333333; font-family: 'Roboto', sans-serif;">Conecte-se</h2> <!-- Título com cor neutra -->
+    <h2 style="text-align: center; color: #333333; font-family: 'Roboto', sans-serif;">Conecte-se</h2>
     <input type="text" id="username" placeholder="Usuário">
     <input type="password" id="password" placeholder="Senha">
     <button class="modal-btn">Entrar</button>
@@ -150,40 +158,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Abrir e fechar o modal
         const openModalButton = document.getElementById('openModalButton');
         const closeModalButton = document.getElementById('closeModalButton');
         const loginModal = document.getElementById('loginModal');
+        const centeredText = document.querySelector('.centered-text');
 
         openModalButton.addEventListener('click', () => {
             loginModal.style.display = 'block';
+            centeredText.style.display = 'none';
         });
 
         closeModalButton.addEventListener('click', () => {
             loginModal.style.display = 'none';
+            centeredText.style.display = 'block';
         });
     });
 </script>
 
 </body>
 </html>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Abrir e fechar o modal
-        const openModalButton = document.getElementById('openModalButton');
-        const closeModalButton = document.getElementById('closeModalButton');
-        const loginModal = document.getElementById('loginModal');
-        const centeredText = document.querySelector('.centered-text'); // Seleciona a frase
-
-        openModalButton.addEventListener('click', () => {
-            loginModal.style.display = 'block'; // Exibe o modal
-            centeredText.style.display = 'none'; // Oculta a frase ao clicar no botão
-        });
-
-        closeModalButton.addEventListener('click', () => {
-            loginModal.style.display = 'none'; // Oculta o modal
-            centeredText.style.display = 'block'; // Mostra a frase novamente ao fechar o modal
-        });
-    });
-</script>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        /* Importando a fonte Roboto */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        /* Estilos para o corpo */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            background-image: url('/static/bela-paisagem-montanhosa.jpg');
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Adicionando uma camada de sobreposição */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Sobreposição escura */
+            z-index: -1;
+        }
+
+        /* Estilos para a tela */
+        .screen {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* Cor do texto */
+        }
+
+        /* Estilo para o logotipo */
+        .logo {
+            width: 150px; /* Tamanho do logotipo */
+            margin-bottom: 20px; /* Espaçamento entre logotipo e texto */
+        }
+
+        /* Estilo do texto centralizado */
+        .centered-text {
+            font-size: 48px; /* Tamanho maior */
+            text-align: center;
+            z-index: 2;
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            margin-bottom: 40px; /* Espaçamento inferior para o botão */
+            text-shadow: 2px 2px 10px rgba(100, 48, 48, 0.5); /* Sombras para melhorar legibilidade */
+        }
+
+        /* Estilo do botão de login */
+        .login-btn {
+            padding: 15px 40px;
+            background-color: #ffffff; /* Cor neutra */
+            color: #333333;
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            border: none;
+            border-radius: 30px; /* Botão mais arredondado */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+            z-index: 2;
+        }
+
+        /* Efeito hover para o botão */
+        .login-btn:hover {
+            background-color: #dddddd;
+            transform: scale(1.05); /* Efeito de leve aumento */
+        }
+
+        /* Estilo para o modal de login */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
+
+        /* Estilo dos campos de input no modal */
+        .modal input {
+            width: 93%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Botão dentro do modal */
+        .modal .modal-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #333333; /* Cor neutra escura */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal .modal-btn:hover {
+            background-color: #555555;
+        }
+
+        /* Estilo para o botão de fechar o modal */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            background-color: transparent;
+            border: none;
+            color: #333333;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Texto centralizado, logotipo e botão de login -->
+<div class="screen">
+    <!-- Logotipo da EcoRotas -->
+    <img src="/static/EcoRotasOfficial.png" alt="Logotipo da EcoRotas" class="logo">  
+    <div class="centered-text">Sua melhor rota está aqui</div>
+    <!-- Botão de login que abre o modal -->
+    <button class="login-btn" id="openModalButton">Entrar</button>
+</div>
+
+<!-- Modal de login -->
+<div class="modal" id="loginModal">
+    <button class="close-btn" id="closeModalButton">×</button>
+    <h2 style="text-align: center; color: #333333; font-family: 'Roboto', sans-serif;">Conecte-se</h2>
+    <form id="loginForm">
+        <input type="text" id="username" name="username" placeholder="Usuário">
+        <input type="password" id="password" name="password" placeholder="Senha">
+        <button type="button" class="modal-btn" id="loginButton">Entrar</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const openModalButton = document.getElementById('openModalButton');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const loginModal = document.getElementById('loginModal');
+        const centeredText = document.querySelector('.centered-text');
+        const loginButton = document.getElementById('loginButton');
+
+        openModalButton.addEventListener('click', () => {
+            loginModal.style.display = 'block';
+            centeredText.style.display = 'none';
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+            centeredText.style.display = 'block';
+        });
+
+        // Envia a requisição de login via AJAX
+        loginButton.addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = "/rotas";
+                    } else {
+                        alert("Login falhou. Verifique suas credenciais.");
+                    }
+                })
+                .catch(error => console.error("Erro na requisição de login:", error));
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

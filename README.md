@@ -39,3 +39,14 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 | **Backend**       | Flask (Python)            |  
 | **Mapas**         | Folium, OSMnx             |  
 | **Banco de Dados**| MySQL                     |  
+
+---
+
+## 🌟 Exemplos de Uso
+
+### 🚗 Planejamento de Rotas  
+1. Faça login no sistema.  
+2. Insira os **pontos de origem e destino**.  
+3. Visualize:  
+   - A **rota otimizada**.  
+   - O **impacto ambiental calculado**.  

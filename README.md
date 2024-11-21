@@ -42,6 +42,24 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 
 ---
 
+---
+
+## 🧰 Como Instalar e Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Mingarelli/EcoRotas.git
+   cd EcoRotas
+   cd Site
+   ```
+2. Instale as dependências:
+
+   Instalação do framework OSMNX no projeto para o Geoprecessamento
+   ```bash
+   pip install OSMNX
+   ```
+   
+
 ## 🌟 Exemplos de Uso
 
 ### 🚗 Planejamento de Rotas  
@@ -49,4 +67,13 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 2. Insira os **pontos de origem e destino**.  
 3. Visualize:  
    - A **rota otimizada**.  
-   - O **impacto ambiental calculado**.  
+   - O **impacto ambiental calculado**.
+  
+---
+
+## 📞 Contato  
+
+**Guilherme Mingarelli**  
+- [LinkedIn](https://www.linkedin.com/in/seu-perfil-linkedin)  
+- [GitHub](https://github.com/Mingarelli)  
+- **Email**: [guilherme@example.com](mailto:guilherme@example.com)  

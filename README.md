@@ -75,10 +75,10 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 
 Membros:
 
-    **Camila Coelho**  
-    - [LinkedIn](https://www.linkedin.com/in/camila-coelho-dias/)  
-    - [GitHub](https://github.com/Camila-Coelho-Dias)  
-    - **Email**: [camiladias4004@gmail.com](mailto:camiladias4004@gmail.com)
+  **Camila Coelho**  
+  - [LinkedIn](https://www.linkedin.com/in/camila-coelho-dias/)  
+  - [GitHub](https://github.com/Camila-Coelho-Dias)  
+  - **Email**: [camiladias4004@gmail.com](mailto:camiladias4004@gmail.com)
 
   **Eduardo Barreto**  
   - [LinkedIn](https://www.linkedin.com/in/eduardo-b-b165b9116/)  

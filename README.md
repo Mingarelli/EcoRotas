@@ -54,11 +54,20 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
    ```
 2. Instale as dependências:
 
-   Instalação do framework OSMNX no projeto para o Geoprecessamento
+   O framework **OSMNx** é uma ferramenta essencial para realizar o geoprocessamento no projeto **EcoRotas**, permitindo o acesso a dados de mapas e a geração de rotas otimizadas.  
    ```bash
-   pip install OSMNX
+   pip install osmnx
+   ```
+
+   O **Flask** é o framework web utilizado no projeto **EcoRotas** para gerenciar o backend da aplicação. Ele fornece uma estrutura leve e flexível, permitindo a criação de APIs e o   processamento de dados necessários para a geração de rotas otimizadas e a análise do impacto ambiental.
+   ```bash
+   pip install flask
    ```
    
+   O **MySQL Connector** é a biblioteca utilizada no projeto **EcoRotas** para conectar o backend, desenvolvido em Flask, ao banco de dados **MySQL**. Ele permite a execução de consultas, inserções e gerenciamento eficiente dos dados da aplicação.
+  ```bash
+   pip install mysql-connector-python
+   ```
 
 ## 🌟 Exemplos de Uso
 

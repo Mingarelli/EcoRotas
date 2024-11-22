@@ -73,7 +73,27 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 
 ## 📞 Contato  
 
-**Guilherme Mingarelli**  
-- [LinkedIn](https://www.linkedin.com/in/guilherme-santiago-mingarelli-30b67395/)  
-- [GitHub](https://github.com/Mingarelli)  
-- **Email**: [guilhermemingarelli@gmail.com](mailto:guilhermemingarelli@gmail.com)  
+Membros:
+
+  **Camila Coelho**  
+  - [LinkedIn](https://www.linkedin.com/in/camila-coelho-dias/)  
+  - [GitHub](https://github.com/Camila-Coelho-Dias)  
+  - **Email**: [camiladias4004@gmail.com](mailto:camiladias4004@gmail.com)
+
+  - **Eduardo Barreto**  
+  - [LinkedIn](https://www.linkedin.com/in/eduardo-b-b165b9116/)  
+  - [GitHub](https://github.com/VieiraEduardo)  
+  - **Email**: [eduardo.bviera@gmail.com](mailto:eduardo.bviera@gmail.com)  
+
+  **Guilherme Mingarelli**  
+  - [LinkedIn](https://www.linkedin.com/in/guilherme-santiago-mingarelli-30b67395/)  
+  - [GitHub](https://github.com/Mingarelli)  
+  - **Email**: [guilhermemingarelli@gmail.com](mailto:guilhermemingarelli@gmail.com)
+
+Orientador:
+
+  **Tércio Ribeiro**  
+  - [LinkedIn](https://www.linkedin.com/in/tercio-ribeiro/)  
+  - [GitHub](https://github.com/tbribeiro05)  
+  - **Email**: [terciobr05@hotmail.com](mailto:terciobr05@hotmail.com)
+

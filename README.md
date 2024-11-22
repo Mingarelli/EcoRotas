@@ -49,6 +49,7 @@ Antes de começar, você precisará ter instalado em sua máquina:
 - [Git](https://git-scm.com)
 - [Python](https://www.python.org)
 - [MySQL](https://www.python.org)
+- [VS Code](https://code.visualstudio.com)
 
 ---
 
@@ -60,7 +61,8 @@ Antes de começar, você precisará ter instalado em sua máquina:
    cd EcoRotas
    cd Site
    ```
-2. Instale as dependências:
+   
+2. Instale as dependências no VS Code:
 
    O framework **OSMNx** é uma ferramenta essencial para realizar o geoprocessamento no projeto **EcoRotas**, permitindo o acesso a dados de mapas e a geração de rotas otimizadas.  
    ```bash
@@ -75,6 +77,19 @@ Antes de começar, você precisará ter instalado em sua máquina:
    O **MySQL Connector** é a biblioteca utilizada no projeto **EcoRotas** para conectar o backend, desenvolvido em Flask, ao banco de dados **MySQL**. Ele permite a execução de consultas, inserções e gerenciamento eficiente dos dados da aplicação.
    ```bash
    pip install mysql-connector-python
+   ```
+
+3. Executação no VS Code:
+
+   No terminal executar os seguintes códigos:
+   
+   ```bash
+   venv\Scripts\activate 
+   ```
+   
+   Roda o código no local onde salvou:
+   ```bash
+   & C:/Users/xxxxx/xxxxx/xxxxxx/xxxxx/Site/venv/Scripts/python.exe c:/Users/xxxxx/xxxxxx/xxxxx/xxxxx/Site/meu_site.py
    ```
 
 ## 🌟 Exemplos de Uso

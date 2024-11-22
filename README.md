@@ -74,6 +74,6 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 ## 📞 Contato  
 
 **Guilherme Mingarelli**  
-- [LinkedIn](https://www.linkedin.com/in/seu-perfil-linkedin)  
+- [LinkedIn](https://www.linkedin.com/in/guilherme-santiago-mingarelli-30b67395/)  
 - [GitHub](https://github.com/Mingarelli)  
-- **Email**: [guilherme@example.com](mailto:guilherme@example.com)  
+- **Email**: [guilhermemingarelli@gmail.com](mailto:guilhermemingarelli@gmail.com)  

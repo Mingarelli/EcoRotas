@@ -42,6 +42,14 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
 
 ---
 
+## 📋 Pré-requisitos
+
+Antes de começar, você precisará ter instalado em sua máquina:
+
+- [Git](https://git-scm.com)
+- [Python](https://www.python.org)
+- [MySQL](https://www.python.org)
+
 ---
 
 ## 🧰 Como Instalar e Executar

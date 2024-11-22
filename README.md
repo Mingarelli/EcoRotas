@@ -65,7 +65,7 @@ O projeto contribui diretamente para um futuro mais sustentável e eficiente no 
    ```
    
    O **MySQL Connector** é a biblioteca utilizada no projeto **EcoRotas** para conectar o backend, desenvolvido em Flask, ao banco de dados **MySQL**. Ele permite a execução de consultas, inserções e gerenciamento eficiente dos dados da aplicação.
-  ```bash
+   ```bash
    pip install mysql-connector-python
    ```
 
